@@ -1,4 +1,5 @@
 import react from "react";
+import Card from "./Card";
 
 const Main = () => {
   return (
@@ -36,6 +37,10 @@ const Main = () => {
             </button>
           </div>
         </form>
+      </div>
+
+      <div className="container">
+        <Card />
       </div>
     </>
   );
