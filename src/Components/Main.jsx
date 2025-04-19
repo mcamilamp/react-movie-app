@@ -13,7 +13,8 @@ const Main = () => {
     fetch(url_set)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.results);
+        //console.log(data.results);
+        setData(data.results);
       });
   }, [url_set]);
 
@@ -55,11 +56,13 @@ const Main = () => {
       </div>
 
       <div className="container">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {movieData.length == 0 ? (
+          <p className="notfound">Not Found</p>
+        ) : (
+          movieData.map((res, pos) => {
+            return <Card info={res} key={pos} />;
+          })
+        )}
       </div>
     </>
   );
