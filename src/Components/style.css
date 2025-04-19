@@ -182,7 +182,7 @@ nav ul li a:focus::before {
 @media (max-width: 900px) {
   .header {
     background-color: var(--secondary-color);
-    height: 180px;
+    height: 230px;
   }
 
   nav ul {
